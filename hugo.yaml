@@ -1,0 +1,96 @@
+baseURL: "https://nobe0716.github.io/"
+languageCode: "ko-kr"
+title: "Noah Jung's Tech Blog"
+theme: "PaperMod"
+
+# Permalinks structure
+permalinks:
+  posts: /posts/:slug/
+
+# Pagination
+paginate: 10
+
+# Taxonomies
+taxonomies:
+  category: categories
+  tag: tags
+
+# Menu
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: categories
+      name: Categories
+      url: /categories/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+
+params:
+  env: production
+  title: "Noah Jung"
+  description: "기술적인 깊이와 성찰을 기록하는 엔지니어링 블로그"
+  keywords: [Tech, Engineer, Backend, Performance, Architecture, Leadership]
+  author: "Noah Jung"
+  images: ["/images/papermod-cover.png"] # Fallback OG image
+
+  # Theme Appearance
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+
+  # Home Page
+  homeInfoParams:
+    Title: "반갑습니다. Noah Jung입니다."
+    Content: "안녕하세요. 성능 최적화, 아키텍처 설계, 그리고 엔지니어링 매니지먼트에 대해 고민하고 기록합니다."
+
+  # Social Icons
+  socialIcons:
+    - name: github
+      url: "https://github.com/nobe0716"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/sunghyo-jung/" # Assuming based on name
+    - name: email
+      url: "mailto:nobe0716@gmail.com"
+
+  # Analytics & SEO
+  # googleAnalyticsID: "G-XXXXXXXXXX" # User can add later
+
+  # PaperMod specific
+  label:
+    text: "Home"
+    icon: /apple-touch-icon.png
+    iconHeight: 35
+
+  editPost:
+    URL: "https://github.com/nobe0716/nobe0716.github.io/tree/main/content"
+    Text: "수정 제안하기"
+    appendFilePath: true
+
+# SEO / robots.txt
+enableRobotsTXT: true
+
+# Markdown / Goldmark
+markup:
+  goldmark:
+    renderer:
+      unsafe: true # To support raw HTML if needed
+  highlight:
+    style: monokai
+    noClasses: false
