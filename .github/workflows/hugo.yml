@@ -46,7 +46,7 @@ jobs:
         id: setup-pages
         uses: actions/configure-pages@v4
       - name: Install Node.js dependencies
-        if: exists('package-lock.json')
+        if: ${{ hashFiles('package-lock.json') != '' }}
         run: npm ci
       - name: Build with Hugo
         env:
