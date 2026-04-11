@@ -6,3 +6,4 @@ hugo_stats.json
 .env
 *.log
 .idea/
+archived/
