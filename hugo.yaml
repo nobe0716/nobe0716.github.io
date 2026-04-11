@@ -1,6 +1,6 @@
 baseURL: "https://nobe0716.github.io/"
 languageCode: "ko-kr"
-title: "Noah Jung's Tech Blog"
+title: "Sunghyo Jung's Tech Blog"
 theme: "PaperMod"
 
 # Permalinks structure
@@ -37,10 +37,10 @@ menu:
 
 params:
   env: production
-  title: "Noah Jung"
-  description: "기술적인 깊이와 성찰을 기록하는 엔지니어링 블로그"
-  keywords: [Tech, Engineer, Backend, Performance, Architecture, Leadership]
-  author: "Noah Jung"
+  title: "Sunghyo Jung"
+  description: "백엔드 개발, 엔지니어링 운영, 내부 도구, AI 활용 경험을 기록하는 기술 블로그"
+  keywords: [Backend, Engineering, Internal Tools, AI Agent, Retrospective, Ownership Cost]
+  author: "Sunghyo Jung"
   images: ["/images/papermod-cover.png"] # Fallback OG image
 
   # Theme Appearance
@@ -57,8 +57,8 @@ params:
 
   # Home Page
   homeInfoParams:
-    Title: "반갑습니다. Noah Jung입니다."
-    Content: "안녕하세요. 성능 최적화, 아키텍처 설계, 그리고 엔지니어링 매니지먼트에 대해 고민하고 기록합니다."
+    Title: "반갑습니다. Sunghyo Jung입니다."
+    Content: "제품 개발과 엔지니어링 운영 사이에서 마주치는 실행 비용, ownership cost, 내부 도구, AI 활용 경험을 기록합니다."
 
   # Social Icons
   socialIcons:

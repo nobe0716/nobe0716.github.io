@@ -1,4 +1,4 @@
-# Noah Jung's Tech Blog
+# Sunghyo Jung's Tech Blog
 
 Hugo(PaperMod 테마) 기반의 한국어 기술 블로그입니다. 성능 최적화, 아키텍처 설계, 엔지니어링 매니지먼트에 대한 고민과 경험을 기록합니다.
 
