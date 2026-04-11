@@ -2,7 +2,7 @@
 title: "Slack 번역봇, 외부 솔루션에서 내부 시스템으로: TransCat 개발 회고"
 description: "Slack 번역봇을 외부 솔루션에서 Cloud Run 기반 내부 운영 시스템으로 전환하며, AI 에이전트가 실행 비용과 유지보수 부담을 어떻게 낮췄는지 돌아봅니다."
 date: 2026-04-12T01:30:00+09:00
-lastmod: 2026-04-12T01:30:00+09:00
+lastmod: 2026-04-12T02:54:00+09:00
 slug: "transcat-slack-translation-bot-internal-system"
 draft: false
 categories: ["Retrospective"]
