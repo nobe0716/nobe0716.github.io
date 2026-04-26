@@ -4,7 +4,7 @@ description: "AI 코드 리뷰의 False Positive를 줄이고 신뢰성을 높�
 date: 2026-04-26T08:30:00+09:00
 lastmod: 2026-04-26T15:43:00+09:00
 slug: "ai-code-review-reliability"
-draft: true
+draft: false
 categories: ["Engineering Management"]
 tags: ["AI Code Review", "Experiment", "GitHub", "Retrospective", "AI Native"]
 showToc: true
