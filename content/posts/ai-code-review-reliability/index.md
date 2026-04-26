@@ -1,6 +1,6 @@
 ---
 title: "AI 코드 리뷰, '의심'과 '리스크'를 가르치다"
-description: "AI 코드 리뷰의 False Positive를 줄이고 신뢰도를 높이기 위해, AI 에이전트와 함께 파이프라인을 고도화하고 프로덕션 버그로 백테스트한 과정을 정리합니다."
+description: "AI 코드 리뷰의 False Positive를 줄이고 신뢰성을 높이기 위해, Confidence Score와 Risk Triage를 도입하고 프로덕션 버그로 백테스트한 과정을 정리합니다."
 date: 2026-04-26T08:30:00+09:00
 lastmod: 2026-04-26T15:43:00+09:00
 slug: "ai-code-review-reliability"
@@ -50,8 +50,9 @@ AI 리뷰어에게는 세 가지 문제가 있었다.
 ## 리뷰를 분해하다
 
 우리는 리뷰를 세 가지 축으로 쪼갰다.
-Risk. Confidence. Context.
-이 세 가지다.
+Risk.
+Confidence.
+Context.
 
 - **Risk (S0):** PR의 크기, 파일 유형, 마이그레이션 포함 여부로 리스크 점수를 산출한다. 점수에 따라 리뷰 강도가 달라진다.
 - **Confidence (S2):** AI가 각 이슈마다 1~10의 신뢰도를 스스로 매긴다. 5점 미만은 blocking이 아니라 suggestion으로 처리된다.
@@ -71,7 +72,7 @@ Risk. Confidence. Context.
 
 결과는 명확했다. **Confidence가 포함된 조합에서만 Verdict가 달라졌다.** Baseline에서 APPROVE였던 PR이 Risk+Confidence 조합에서는 REQUEST_CHANGES로 바뀌었다. Context 정규화는 diff가 컨텍스트 윈도우 안에 들어가는 규모에서 효과가 없었다.
 
-11개 PR로 표본을 늘려도 패턴은 같았다. Risk는 HIGH/MEDIUM PR에서 100% 추가 가치를 줬지만, LOW에서는 14%.
+11개 PR로 표본을 늘려도 패턴은 같았다. 내부 실험 기준으로 Risk는 HIGH/MEDIUM PR에서 100%, LOW PR에서는 14% 수준이었다.
 
 AI에게 `Confidence: 8/10` 같은 점수를 강제하고, 5점 미만은 suggestion으로 격하시켰다. 불필요한 차단이 사라졌다.
 
@@ -130,5 +131,6 @@ Baseline이 APPROVE를 때린 PR에서, Confidence를 장착한 봇은 호출 �
 >
 > — Claude, 프로젝트 회고 중
 
-AI가 리뷰를 하는 게 아니다.
-의심하고, 물러나는 구조를 만든다.
+그래서 이제는 AI에게 리뷰를 "맡긴다"고 생각하지 않는다.
+리뷰어를 하나 더 붙이는 일이 아니다.
+의심하고, 물러나고, 사람이 멈춰 세울 수 있는 구조를 만드는 일이다.
